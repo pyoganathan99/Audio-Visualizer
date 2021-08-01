@@ -1,0 +1,21 @@
+.visualizer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 4px;
+
+    width: 240px;
+    height: 150px;
+}
+
+.bar {
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        #444444ff 0%,
+        #444444ff 26px,
+        #44444400 26px,
+        #44444400 30px
+    );
+
+    align-self: end;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualizer</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <main id="app">
+        <div class="visualizer">
+            <div v-for="(bar, index) in bars" :key="index" class="bar" :style="{ height: (bar.value * 100) + '%' }">
+            </div>
+        </div>
+
+        <audio controls ref="audio" @play="play">
+            <!-- This file is not commited into version control, please provide your own -->
+            <source src="audio.mp3" />
+        </audio>
+    </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>
